@@ -10,6 +10,46 @@
 <body>
     <!--========== Navigation Bar ==========-->
     <!-- upper right: link to image search and advanced search -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mb-5 mt-1">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="assets/favicon.png" alt="Google Logo" width="24" height="24">
+                CS50 Search
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-1">
+                        <a href="image-search.html" class="nav-link active" aria-current="page">Search</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="image-search.html" class="nav-link">Images Search</a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a href="advanced-search.html" class="nav-link">Advanced Search</a>
+                    </li>
+                    <li class="nav-item disabled">
+                        <a class="nav-link"
+                           href="https://cs50.harvard.edu/web/2020/projects/0/search/"
+                           target="_blank"
+                        >
+                            CS50 Project
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="container">
         <!--==========Google Logo ==========-->
@@ -45,6 +85,6 @@
         </div>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
