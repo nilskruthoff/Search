@@ -51,9 +51,31 @@
     </nav>
 
     <!--==========Google Logo ==========-->
+    <div class="row">
+        <form id="advancedSearchForm" class="col-12" method="post">
+            <div>
+                <label for="allWords">all of these words:</label>
+                <input id="allWords" type="text" placeholder="Gib die wichtigsten Wörter ein: glatthaar foxterrier dreifarbig">
+            </div>
+            <div>
+                <label for="exactWord">this exact word or phrase:</label>
+                <input id="exactWord" type="text">
+            </div>
+            <div>
+                <label for="anyWords">any of these words:</label>
+                <input id="anyWords" type="text">
+            </div>
+            <div>
+                <label for="noneWords">none of these words:</label>
+                <input id="noneWords" type="text">
+            </div>
+            <button type="submit" class="btn btn-primary">Advance Search</button>
+        </form>
+    </div>
 
     <!--========== Input Field ==========-->
     <!-- input text field and submit button -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/advanced-search.js"></script>
 </body>
 </html>
