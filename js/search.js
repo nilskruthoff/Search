@@ -8,15 +8,26 @@ window.addEventListener("load", function() {
         const formData = document.querySelectorAll('#searchForm input');
         const searchKeyword = formData[0]['value'];
         let searchQuery = "";
-        if (source === "search")
+
+        if (e['submitter']['id'] === 'searchSubmit')
         {
-            searchQuery = "https://www.google.com/search?q=" + searchKeyword;
-        } else if (source === "image-search")
+            console.log("TEST")
+            if (source === "search")
+            {
+                searchQuery = "https://www.google.com/search?q=" + searchKeyword;
+            } else if (source === "image-search")
+            {
+                searchQuery = "https://www.google.com/search?q=" + searchKeyword + "&tbm=isch";
+            }
+            console.log(e);
+        } else if (e['submitter']['id'] === 'searchLucky')
         {
-            searchQuery = "https://www.google.com/search?q=" + searchKeyword + "&tbm=isch";
+            searchQuery = "https://www.google.de/search?q=" + searchKeyword + "&btnI=Auf gut Glück!"
         }
 
         console.log("Redirected to " + searchQuery);
         window.location.href = searchQuery;
     })
 });
+
+//https://www.google.de/search?q=test&btnI=Auf gut Glück!&
