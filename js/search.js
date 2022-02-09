@@ -11,21 +11,21 @@ window.addEventListener("load", function() {
         const searchKeyword = formData[0]['value'];
         let searchQuery = "";
 
-        // if the search button was clicked
+        // if the search button from index.html or image-search.html was clicked
         if (e['submitter']['id'] === 'searchSubmit')
         {
-            // if it is from normal google search
+            // if it is from index.html
             if (source === "search")
             {
                 // set this query string
                 searchQuery = "https://www.google.com/search?q=" + searchKeyword;
-            // if it is from image search
+            // if it is from image-search.html
             } else if (source === "image-search")
             {
                 // set this query string to forward to google pictures
                 searchQuery = "https://www.google.com/search?q=" + searchKeyword + "&tbm=isch";
             }
-        // if the feeling lucky button is pressed
+        // if the feeling lucky button from index.html is pressed
         } else if (e['submitter']['id'] === 'searchLucky')
         {
             // set this query string to forward to google first search result
