@@ -8,33 +8,32 @@
 </head>
 <body>
     <!--========== Navigation Bar ==========-->
-    <!-- upper right: link to image search and normal search -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white mb-5 mt-1">
-        <div class="container-fluid">
+        <div class="container">
             <a href="#" class="navbar-brand">
                 <img src="assets/favicon.png" alt="Google Logo" width="24" height="24">
                 CS50 Search
             </a>
             <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-1">
-                        <a href="image-search.html" class="nav-link">Search</a>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Search</a>
                     </li>
-                    <li class="nav-item mx-1">
+                    <li class="nav-item">
                         <a href="image-search.html" class="nav-link">Images Search</a>
                     </li>
-                    <li class="nav-item mx-1">
+                    <li class="nav-item">
                         <a href="advanced-search.html" class="nav-link active" aria-current="page">Advanced Search</a>
                     </li>
                     <li class="nav-item disabled">
@@ -50,31 +49,94 @@
         </div>
     </nav>
 
-    <!--==========Google Logo ==========-->
-    <div class="row">
-        <form id="advancedSearchForm" class="col-12" method="post">
-            <div>
-                <label for="allWords">all of these words:</label>
-                <input id="allWords" type="text" placeholder="Gib die wichtigsten Wörter ein: glatthaar foxterrier dreifarbig">
+    <!--========== Google Logo ==========-->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <a href="https://google.com">
+                    <img src="assets/google-logo.png" class="img-fluid" alt="Google Logo">
+                </a>
             </div>
-            <div>
-                <label for="exactWord">this exact word or phrase:</label>
-                <input id="exactWord" type="text">
-            </div>
-            <div>
-                <label for="anyWords">any of these words:</label>
-                <input id="anyWords" type="text">
-            </div>
-            <div>
-                <label for="noneWords">none of these words:</label>
-                <input id="noneWords" type="text">
-            </div>
-            <button type="submit" class="btn btn-primary">Advance Search</button>
-        </form>
+            <div class="col"></div>
+        </div>
+
+        <!--========== Search Form ==========-->
+        <div class="row">
+            <div class="col-1"></div>
+            <form id="advancedSearchForm" class="col-10" method="post">
+                <div class="row g-3 align-items-center my-1">
+                    <div class="col-3">
+                        <label for="allWords" class="col-form-label">all of these words:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="allWords" class="form-control shadow-sm" style="border-radius: 30px" aria-describedby="allWordsInline">
+                    </div>
+                    <div class="col-3">
+                            <span id="allWordsInline" class="form-text">
+                                Enters the most important words:
+                                smooth foxterrier tricolor.
+                            </span>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center my-1">
+                    <div class="col-3">
+                        <label for="exactWord" class="col-form-label">this exact word or phrase:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="exactWord" class="form-control shadow-sm" style="border-radius: 30px" aria-describedby="exactWordInline">
+                    </div>
+                    <div class="col-3">
+                            <span id="exactWordInline" class="form-text">
+                                Puts the words you are looking for between quotation marks:
+                                "smooth-haired terrier".
+                            </span>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center my-1">
+                    <div class="col-3">
+                        <label for="anyWords" class="col-form-label">any of these words:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="anyWords" class="form-control shadow-sm" style="border-radius: 30px" aria-describedby=anyWordsInline">
+                    </div>
+                    <div class="col-3">
+                            <span id="anyWordsInline" class="form-text">
+                                Enters OR between all searched words:
+                                miniature OR standard
+                            </span>
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center my-1">
+                    <div class="col-3">
+                        <label for="noneWords" class="col-form-label">none of these words:</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" id="noneWords" class="form-control shadow-sm" style="border-radius: 30px" aria-describedby="noneWordsInline">
+                    </div>
+                    <div class="col-3">
+                            <span id="noneWordsInline" class="form-text">
+                                It puts a minus sign directly in front of words that should not be displayed:
+                                -rawhair, - "jack russell".
+                            </span>
+                    </div>
+                </div>
+                <div class="row g-3 my-1">
+                    <div class="col-4"></div>
+                    <div class="form-inline col-4 px-6">
+                        <button type="submit" style="border-radius: 30px" class="form-control flex-fill btn btn-primary">Advance Search</button>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </form>
+
+            <div class="col-1"></div>
+        </div>
     </div>
 
-    <!--========== Input Field ==========-->
-    <!-- input text field and submit button -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/advanced-search.js"></script>
 </body>
